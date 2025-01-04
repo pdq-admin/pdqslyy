@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  background-color: #c0c0c0;
+  padding: 10px;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+  background-color: #c0c0c0;
+}
+
+.mines-count, .timer {
+  width: 50px;
+  height: 30px;
+  background-color: black;
+  color: red;
+  font-family: 'Digital-7', monospace;
+  font-size: 24px;
+  text-align: center;
+  line-height: 30px;
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+  padding: 0 5px;
+}
+
+.reset-btn {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 24px);
+  grid-template-rows: repeat(10, 24px);
+  gap: 2px;
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+
+.cell {
+  width: 24px;
+  height: 24px;
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.revealed {
+  border: 1px solid #808080;
+  background-color: #c0c0c0;
+}
+
+.cell.flagged {
+  background-color: #c0c0c0;
+}
+
+@font-face {
+  font-family: 'Digital-7';
+  src: url('digital-7.ttf') format('truetype');
+}
